@@ -1,0 +1,59 @@
+queue = []
+
+def TakeName():
+    print("Please enter the customer's name: ")
+    OrderName = input()
+    queue.append(OrderName)
+
+def ServeOrder():
+    queue.pop(0)
+
+    print(queue)
+
+def TakeOrder():
+    
+
+
+def menu():
+    print("Welcome to the Coffee Shop!")
+    print("------------------")
+    print("Here is the menu: ")
+    print("1. Coffee")
+    print("2. Tea")
+    print("3. Sandwich")
+    print("4. Pastry")
+    print("5. Exit")
+    print("------------------")
+    print("Please select an option: ")
+    print("")
+    choice = input()
+    return choice
+
+
+while True:
+    TakeName()
+    menu()
+    choice = menu()
+
+    if choice == "1":
+        print("You have selected Coffee.")
+        print("Please wait while we prepare your order.")
+        
+
+    elif choice == "2":
+        print("You have selected Tea.")
+        print("Please wait while we prepare your order.")
+
+    elif choice == "3":
+        print("You have selected Sandwich.")
+        print("Please wait while we prepare your order.")
+
+    elif choice == "4":
+        print("You have selected Pastry.")
+        print("Please wait while we prepare your order.")
+
+    elif choice == "5":
+        print("Thank you for visiting the Coffee Shop!")
+        break
+    else:
+        print("Invalid option. Please try again.")    
