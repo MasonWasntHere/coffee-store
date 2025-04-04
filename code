@@ -1,8 +1,10 @@
 import time
 
+# queue to hold the orders
 queue = []
 
-def TakeName():
+# function to take the customer's name
+def TakeName(): 
     print("Please enter the customer's name: ")
     OrderName = input().strip()
     queue.append(OrderName)
@@ -10,6 +12,7 @@ def TakeName():
     print("")
     print("")
 
+# function to serve the order
 def ServeOrder():
     if queue:
         served_customer = queue.pop(0)
@@ -17,10 +20,12 @@ def ServeOrder():
     else:
         print("No orders in the queue to serve.")
 
+# function to take the order
 def TakeOrder():
     while True:
-        choice = menu()
+        choice = menu() 
 
+        # if choice is 1 then it is coffee
         if choice == "1":
             print("You have selected Coffee.")
             print("")
@@ -29,10 +34,12 @@ def TakeOrder():
             print("")
             time.sleep(2)
             print("Your coffee is ready!")
+            print("")
             time.sleep(1)
             ServeOrder()
             print("")
 
+            # if choice is 2 then it is tea
         elif choice == "2":
             print("You have selected Tea.")
             print("")
@@ -41,10 +48,12 @@ def TakeOrder():
             print("")
             time.sleep(2)
             print("Your tea is ready!")
+            print("")
             time.sleep(1)
             ServeOrder()
             print("")
 
+            # if choice is 3 then it is sandwich
         elif choice == "3":
             print("You have selected Sandwich.")
             print("")
@@ -53,10 +62,12 @@ def TakeOrder():
             print("")
             time.sleep(2)
             print("Your sandwich is ready!")
+            print("")
             time.sleep(1)
             ServeOrder()
             print("")
 
+            # if choice is 4 then it is pastry
         elif choice == "4":
             print("You have selected Pastry.")
             print("")
@@ -65,6 +76,7 @@ def TakeOrder():
             print("")
             time.sleep(2)
             print("Your pastry is ready!")
+            print("")
             time.sleep(1)
             ServeOrder()
             print("")
@@ -81,6 +93,7 @@ def TakeOrder():
             print("Thank you for your order!")
             break
 
+# function to display the menu
 def menu():
     print("Welcome to the Coffee Shop!")
     print("------------------")
@@ -89,13 +102,15 @@ def menu():
     print("2. Tea")
     print("3. Sandwich")
     print("4. Pastry")
-    print("5. Exit")
     print("------------------")
+    print("5. Exit")
     print("Please select an option: ")
     print("")
+    # input for the menu choice
     choice = input()
     return choice
 
+# main loop
 while True:
     TakeName()
     result = TakeOrder()
